@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <title>Running Shoes</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <a class="navbar-brand" href="#">
+        <img
+          class="imagesize"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOUAAADcCAMAAAC4YpZBAAAAnFBMVEX+/v7EJSr////BEBnDGiDEIifDHSPBDRa+AADYjI/ABw/lrrHCFh3rwsXAAADBBRLx4N/DKjDnwsHAAAjOXmDUe3zJTFHnvL/gp6bHRUnx2Nr47u3muLjYhon35+jTcHPuzM769vXUcXXjs7Lx1NXMV1rVgITFPULdn6DMZ2fnxsfdnJ3luLzISE3EMDb78/XXkI7GOD7ZfoLMYWPQmmUXAAAIoElEQVR4nO2biXKqQBZA8UIDIoKKihFFUbJonjE+///f5vYCsseXqpmJqXvKygIIfeju2wuNphEEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRC/E+jkywNKh/5YYPu5LzBYIG9vb/wX/pti6qNhG9vtNk3xx3C42n+OfrbmwbbK6Lqly7/sAcDadtoJEPzl+/buh2cmbPxeCxbAe9C2swCzNj9bkmuuPbMx8e5fSAJ2h6T98tMluWZ4cfUSluUjXgh/eD4z39I7ME7hz5fUuGccj0osOaMEZgZKfhxHXcQP4YjAebEKh8dtusRER1HCOSeJpr1igdXfIUo5y5Hcez7zj+QcD88PIomcPD+PmoEdOLyQjpNYxwLrpPDsBWpXYONO3GvprmGYjLn2s/YwlpB8GNWgYk4hxGrJjFir7cviTk9/ehxJ1IzHbkVB70Mft7ExjFqbE3/+QOVV47k5dVzDxXKY4W1hjk2MeYA9j7SmiLsS1X/wrQdoQsoAHF9mLzPBBpnNErDRzlrAmmfpdLXCCDUMwxD/kJ3B1cOE1wK1DvjSlsHnxIRsjeTxHNFSm10Pm81ut5v9/fsyi2HCS6qbnDHK9IIU9jyb/76s+8h6tpmOB49oiZrXwDB5neQ1NIJPbEjMZ1iKahnDyXJ5vXUlhtd/SEnRp83CKTsBHLAFMV5gYOG/rxDppfAarB+wUkoAFgFv8nXX34E25/VxL7p55hVWnnlDdxYPK4lAitHzrb/ehHD+QEtnCfyX/gn75+mNHz5q/pLCHMeF9ZgJsWhPVo80A/IvQF/nwefIq6rbT3GkEsa/Ri4HEsPEAYno+fRc7Kl7H78nC2/AaOyt4I8n5wuY9RT9Qkmem5sUkhnD4VZgu+uH7OvcAY8y+EniODprv7G4FvhlUZUgCIIgCIL4GZR6mf/j7uZ/v4v71YqN7iUdX3z568UjpUPuTNnXZ65JDqbT5/l8fjo9Ia8ZT0/z6YCPBGESFlnxqX8++8/ZR7BctCC+rEE8PXA2ObuNmJHe8ScMf8Qho8uT5BKWU5e0ZwyfP1sVCMvUJs1g7Zsma8L0xzFm1iVQD2/4Kg7501Fb7BQGnm414pv8UjCSE5OGnIYuE7wLy4Ou5i2Nj+LzPYht8cCIP46XE9QGP4gn7MDT9dfzCziOc/vHfqtZ9qvP4m64V8z8U/vKhyAVc8nNmDzNHY/zej3rTeSJU95ws3SrV87uv2vGIB4utZ148S+W7CMBmH/Tsufs77KcF5aWsMJzTLRs/aa7+Z4l88uI58ZsfM4sTbcBb5tZVsqi+IpxRcslX84ki7hKlZFfw0NLCJ1C8vR13bJyTXFPmBFllsysE7SUWDY+ToocZ0LT5Jb8vOZ0XaQvWY+UpTkrw5dL9Mw5SiTpdns84snDybt4QmLswjxajDCMvMqiojLUuk3VKkszuxi/HjIVRzrbzPI05zwLptfrlce66582y0ooXogk6RHAMz+tNWgJ2dLSTspbd4ayLMb7pSi8+lsx4MPCV0VQLjowNlXLoHLBvbigP1CWZnOLorVZlre+CUsnzixrZUAdpyzLU6ywyS0LG1Nhab0XI0zSk/XhBE8yT4Nl3jFRluWJTXVBS1ky8755z7a8FCdzRjfLxjv2DctSHH2X1drfwtaTJff5Zqkry4bC469UXhpJY7paLXnFxBrE13Eia1GCnFRZYjkbDY+KrYK3Ws2WB/MuS4jyOAUwlWXWn0DJ0k5GcYFI1m5MWGappQqVquNxWdfMLUO+Csn31WpOeclgdLPse7w/IJZ4yibYXnzLshDlYSYjiL3kbY7MVvaa9eCUpbbnK6CyxVKObBFYlFtGtkiUk3cOvE2HJUz8astovmqZ5Tt/dFUG60ab5bWpxC6rlpmYe4CCsjMoWyaw96oJM6aQW8Zedeesw1KDbUXT5KEApt+xbMrLuuVBlhhddDshkuGW9WRAySyxMSu1qfwQ7FrmlrV+h7HrskRNPdM0ed5fUshSzC2DStPfUWK7LPMlIaoI9/QXFTRklcuiMIwySw1zs9BPdQJ3hdtyS7uSLqurxIqEKE3zkG5Tudgot9yLocTu1vTvhq2WIv/ZV5aqb+ckA9Wqq3scRHI4czs1LGXcG2LvYhVueac+szyPrpsCmMLNe7cl3l7DzEpjFgQyy39pSRotR2VLmMhyaPUTJkYbZlaQ3Bc5Iiucut5U5Jb/1pKoG25KzSBPTGaZf0F8tE5LEbHYqdFynw2CL0xWQ+2z2uO35KBNlFiv5ZmusnSj5tvfaYmaTHVCVio1h/a8zBtpu3JH77EcyGBjvSW1df28n5/l5ReWRslSZILKhi5LPLnKTV+O3KUle51Op7LyiN6xnFr4OOa99VIv/vOS9dbrlr68e3Aeq6yEmZc10o6vctVLoVxiWy3ZRfAhGEt6+rC1t55vWDI5ugm2kFtWBzhiLoEFw3zkVRodyRhmHCqWtrCU44Wsb4fVdDLhL89MxEdlMO/n3WfZa5rlcFZfWvK6KW+zLlqSQ9sSZYyOw85RdHksC7L5lkUEIhl62KUSWHZqtBvCnZZNZLWiyxI1ZfeSObxX8E1LZr2WZ6fKlqqjE1RGgqr5EH0xVS9bFgd1WtaWacLasyzLcYvbcYDgyVX0S4Cr+rMBL4SFrZbbZ9tsGz+IPjtXBcRLUnYoJnts8QXvtTY7uZZnst+xhPOqarcsYoMXO7uureDvUfEJMd2rz4ik4gW0VaUOLZe8l3/cAsi3QppJIIlqnPFzrq8FgUS+6sbzBiL1Fkm9OGZDkAiSCX/VbdgygMRT4EHqiuJ1jcbD8sObmphiw99Fx962C0Hl/C1HgdZ6SOXAe65NEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARB/P/5D9BV2ny7N+ELAAAAAElFTkSuQmCC"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link size" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link size" href="#productSection">Products</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link size" href="#cat">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link size" href="#new">New Arrivals</a>
+          </li>
+          <div>
+            <li class="nav-item">
+              <a class="nav-link size" href="#contact">Contact us</a>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <div class="ml-auto">
+        <p>
+          <a href="#cart">
+            <img
+              class="imagesize1"
+              src="https://img.freepik.com/free-vector/hand-drawn-track-field-logo-template_23-2149196484.jpg?size=626&ext=jpg&ga=GA1.2.1336234232.1689917403&semt=ais"
+            />
+          </a>
+        </p>
+      </div>
+    </nav>
+    <h1 class="heading mt-4">SPORTSTYLE SHOES</h1>
+
+    <div class="d-flex flex-row justify-content-between">
+      <div class="bg shadow">
+        <img
+          src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=400"
+          alt="Product 1"
+          class="image"
+        />
+        <h4>GEL-KAYANO 29</h4>
+        <p class="main">
+          The GEL-KAYANO® 29 shoe creates a stable running experience and a more
+          responsive feel underfoot.
+        </p>
+        <p class="main">$49.99</p>
+        <button class="btn btn-primary add-to-cart-btn" data-id="1">
+          Add to Cart
+        </button>
+      </div>
+      <div class="bg shadow">
+        <img
+          src="https://images.pexels.com/photos/1143503/pexels-photo-1143503.jpeg?auto=compress&cs=tinysrgb&w=400"
+          alt="Product 2"
+          class="image"
+        />
+        <h4>METASPEED EDGE+</h4>
+        <p class="main">
+          The METASPEED™ EDGE+ racing shoes are designed for cadence-style
+          runners who are looking to start fast and finish faster.
+        </p>
+        <p class="main">$59.99</p>
+        <button class="btn btn-primary add-to-cart-btn" data-id="2">
+          Add to Cart
+        </button>
+      </div>
+      <div class="bg shadow">
+        <img
+          src="https://images.pexels.com/photos/1468412/pexels-photo-1468412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Product 3"
+          class="image"
+        />
+        <h4>MAGIC SPEED 2</h4>
+        <p class="main">
+          The MAGIC SPEED™ 2 shoe offers the energy you need to move towards a
+          new personal best.
+        </p>
+        <p class="main">$69.99</p>
+        <button class="btn btn-primary add-to-cart-btn" data-id="1">
+          Add to Cart
+        </button>
+      </div>
+      <div class="bg shadow">
+        <img
+          src="https://images.pexels.com/photos/1464648/pexels-photo-1464648.jpeg?auto=compress&cs=tinysrgb&w=400"
+          alt="Product41"
+          class="image"
+        />
+        <h4>GEL-QUANTUM 180 VII</h4>
+        <p class="main">
+          "The GEL-QUANTUM 180™ VII sneaker combines a futuristic shape .
+        </p>
+        <p class="main">$79.99</p>
+        <button class="btn btn-primary add-to-cart-btn" data-id="1">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="d-flex flex-row justify-content-between">
+      <div class="bg shadow">
+        <img
+          src="https://images.pexels.com/photos/17079412/pexels-photo-17079412/free-photo-of-new-black-and-white-sneakers.jpeg?auto=compress&cs=tinysrgb&w=400"
+          alt="Product 1"
+          class="image"
+        />
+        <h4>GEL-NIMBUS 25</h4>
+        <p class="main">
+          "The GEL-NIMBUS® 25 shoe's soft cushioning properties help you feel
+          like you're landing on clouds.
+        </p>
+        <p class="main">$89.99</p>
+        <button class="btn btn-primary add-to-cart-btn" data-id="1">
+          Add to Cart
+        </button>
+      </div>
+      <div class="bg shadow">
+        <img
+          src="https://images.pexels.com/photos/12730127/pexels-photo-12730127.jpeg?auto=compress&cs=tinysrgb&w=400"
+          alt="Product 2"
+          class="image"
+        />
+        <h4>GEL-KINSEI BLAST</h4>
+        <p class="main">
+          The Gel-Kinsei Blast Shoes Are Designed For Distance Runners Seeking A
+          Smooth Stride. .
+        </p>
+        <p class="main">$99.99</p>
+        <button class="btn btn-primary add-to-cart-btn" data-id="2">
+          Add to Cart
+        </button>
+      </div>
+      <div class="bg shadow">
+        <img
+          src="https://images.pexels.com/photos/12484292/pexels-photo-12484292.jpeg?auto=compress&cs=tinysrgb&w=400"
+          alt="Product 3"
+          class="image"
+        />
+        <h4>GEL-KINSEI BLAST LE 2</h4>
+        <p class="main">
+          The Gel-Kinsei Blast Shoes Are Designed For Distance Runners Seeking A
+          Smooth Stride.
+        </p>
+        <p class="main">$95.99</p>
+        <button class="btn btn-primary add-to-cart-btn" data-id="1">
+          Add to Cart
+        </button>
+      </div>
+      <div class="bg shadow">
+        <img
+          src="https://images.pexels.com/photos/5413302/pexels-photo-5413302.jpeg?auto=compress&cs=tinysrgb&w=400"
+          alt="Product41"
+          class="image"
+        />
+        <h4>SOLUTION SWIFT FF</h4>
+        <p class="main">
+          The Fastest Model In The Asics Tennis Range, Our Solution Speed Ff 2
+          Shoe Is All About Helping Players Expand Their Territory On The Court.
+        </p>
+        <p class="main">$97.99</p>
+        <button class="btn btn-primary add-to-cart-btn" data-id="1">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <h1 class="follow-us-section-heading mx-5">Follow Us</h1>
+
+    <div class="d-flex flex-row justify-content-center">
+      <div class="follow-us-icon-container">
+        <i class="clr fab fa-twitter icon"></i>
+      </div>
+      <div class="follow-us-icon-container">
+        <i class="clr fab fa-instagram icon"></i>
+      </div>
+      <div class="follow-us-icon-container">
+        <i class="clr fab fa-facebook icon"></i>
+      </div>
+      <div class="follow-us-icon-container">
+        <i class="clr fab fa-whatsapp icon"></i>
+      </div>
+    </div>
+
+    <div id="contact" class="footer-section pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB2KOs-7ZNvx0n5c4MyoLgA_JKDOVcxhUqaSDBoknojS8mdx5VOY3TEZcBKWWEK-K2h3k&usqp=CAU"
+              class="imagesize"
+            />
+            <h1 class="footer-section-mail-id">redtapeshoes@gmail.com</h1>
+            <p class="footer-section-address">
+              Madanapalle,chitoor,India.
+            </p>
+            <p class="footer-section-address">
+              Contact details: 8686 2343 5465
+              whatsapp no:7539865358
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/20c5629a29.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
